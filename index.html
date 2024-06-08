@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stumble Guys Ping And FPS Booster</title>
+    <style>
+        /* styles.css */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: black;
+            color: white; /* Warna teks default */
+        }
+
+        .container {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .top-title {
+            font-size: 30px; /* Ukuran font judul */
+            margin-bottom: 20px; /* Jarak antara judul dan gambar */
+            font-family: monospace;
+        }
+
+        .top-image {
+            width: 200px; /* Atur ukuran gambar atas */
+            height: auto;
+            margin-bottom: 20px; /* Jarak antara gambar atas dan tombol */
+            border-radius: 19px; /* Membuat sudut gambar melengkung */
+        }
+
+        .button {
+            background-color: #4CAF50; /* Warna latar belakang */
+            color: white; /* Warna teks */
+            padding: 15px 32px; /* Jarak dalam tombol */
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer; /* Menampilkan kursor pointer saat hover */
+            border-radius: 12px; /* Membuat sudut membulat */
+            transition: background-color 0.3s; /* Animasi perubahan warna */
+            border: none; /* Hilangkan border */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .button img {
+            width: 50px; /* Atur ukuran gambar */
+            height: 50px; /* Atur ukuran gambar */
+            margin-bottom: 10px; /* Jarak antara gambar dan teks */
+        }
+
+        .button:hover {
+            background-color: #45a049; /* Warna latar saat dihover */
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            font-size: 12px;
+            color: white;
+        }
+
+        .feedback-button {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border-radius: 19px;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .feedback-button img {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+
+        .feedback-button:hover {
+            background-color: #45a049;
+        }
+
+        .color-input-container {
+            position: absolute;
+            top: 60px;
+            left: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .color-input {
+            border-radius: 19px;
+            padding: 5px 10px;
+            border: none;
+            margin-left: 10px;
+            height: 30px;
+        }
+
+        .color-input img {
+            width: 20px;
+            height: 20px;
+        }
+
+        .playstore-button {
+            position: absolute;
+            bottom: 5px;
+            right: 10px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+        }
+
+        .playstore-button img {
+            width: 115px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <a href="https://forms.gle/CEwATDRaeWk2HEr88" class="feedback-button">
+        <img src="feedback.png" alt="Feedback Icon">
+        <span>Feedback</span>
+    </a>
+    <div class="color-input-container">
+        <img src="color.png" alt="Color Icon">
+        <input type="text" class="color-input" id="colorInput" placeholder="Enter color">
+    </div>
+    <div class="container">
+        <div class="top-title">Stumble Ez</div>
+        <img src="isthg.jpeg" alt="Isthg Image" class="top-image">
+        <div id="openApp1" class="button">
+            <span>Open Stumble With FPS++</span>
+        </div>
+        <div id="openApp2" class="button">
+            <span>Open Stumble With Ping++</span>
+        </div>
+        <div id="openApp3" class="button">
+            <span>Open Stumble With Speed++</span>
+        </div>
+    </div>
+    <div class="footer">Made By MC Kuadrat</div>
+    <button class="playstore-button" onclick="window.location.href='https://play.google.com/store/apps/details?id=com.kitkagames.fallbuddies'">
+        <img src="playstore.png" alt="Play Store Icon">
+    </button>
+
+    <script>
+        document.getElementById('openApp1').addEventListener('click', function() {
+            if (confirm('Stumble Guys FPS++, Do You Want Use This?')) {
+                window.location.href = "stumbleguys://";
+            }
+        });
+
+        document.getElementById('openApp2').addEventListener('click', function() {
+            if (confirm('Stumble Guys PING++, Do You Want Use This?')) {
+                window.location.href = "stumbleguys://";
+            }
+        });
+
+        document.getElementById('openApp3').addEventListener('click', function() {
+            if (confirm('Stumble Guys Speed++, Do You Want Use This?')) {
+                window.location.href = "stumbleguys://";
+            }
+        });
+
+        document.getElementById('colorInput').addEventListener('input', function() {
+            var color = this.value;
+            var buttons = document.querySelectorAll('.button');
+            buttons.forEach(function(button) {
+                button.style.backgroundColor = color;
+            });
+        });
+    </script>
+</body>
+</html>
